@@ -1,0 +1,722 @@
+﻿<Page x:Class="HiraganaApp.MVVM.View.AlphabetPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HiraganaApp.MVVM.View"
+      mc:Ignorable="d" 
+      Background="#c5cbfa"
+      d:DesignHeight="520" d:DesignWidth="800"
+      Title="AlphabetPage">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="MenuButton"
+                    Click="MenuButton_Click"
+                    Grid.Row="0" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Height = "50"
+                    Width="80"
+                    Content="Menu"
+                    FontSize="15"
+                    Foreground="White"
+                    Background="#acb4fc"
+                    BorderBrush="Transparent"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="20,0,52,0" 
+                    />
+        <Button x:Name="ExitButton"
+                    Click="ExitButton_Click"
+                    Grid.Row="0" Grid.Column="10"
+                    Grid.ColumnSpan="11"
+                    Height = "50"
+                    Width="70"
+                    Content="Exit"
+                    FontSize="15"
+                    Foreground="White"
+                    Background="#acb4fc"
+                   
+                    BorderBrush="Transparent"
+                    Style="{StaticResource MaterialDesignFlatButton}" Margin="25,0,20,0"
+                    />
+        <Image
+               Source="/Images/png-image.png"
+               Margin="10,20,60,10" Grid.ColumnSpan="2" Grid.Row="6" RenderTransformOrigin="0.64,0.5"
+              />
+        <TextBlock Grid.Row="0"
+                   Grid.ColumnSpan="12"
+                   FontSize="30" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center"
+                   Text="ひ　ら　が　な" 
+                   Foreground="White" 
+                   Margin="0 3 0 0"
+                   />
+        
+
+
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="n" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="w" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="r" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="y" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="4" Text="m" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="5" Text="h" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="6" Text="n" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="7" Text="t" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="8" Text="s" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+        <TextBlock Grid.Row="1" Grid.Column="9" Text="k" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"/>
+
+
+        <TextBlock Grid.Row="2" Grid.Column="11" Text="a" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"
+                   Margin=" 0 0 20 0"/>
+        <TextBlock Grid.Row="3" Grid.Column="11" Text="i" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"
+                   Margin=" 0 0 20 0"/>
+        <TextBlock Grid.Row="4" Grid.Column="11" Text="u" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"
+                   Margin=" 0 0 20 0"/>
+        <TextBlock Grid.Row="5" Grid.Column="11" Text="e" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"
+                   Margin=" 0 0 20 0"/>
+        <TextBlock Grid.Row="6" Grid.Column="11" Text="o" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="18" Foreground="White"
+                   Margin=" 0 0 20 0"/>
+
+
+
+
+        <Border Grid.Row="2" Grid.Column="0" Width="46" Height="72"
+                Margin="20,2,4,2" Background="#acb4fc" CornerRadius="8" Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ん" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="n" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+
+
+
+        <Border Grid.Row="2" Grid.Column="1" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc" CornerRadius="8" Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="わ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="wa" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="6" Grid.Column="1" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc" CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="を" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="wo" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+
+
+        <Border Grid.Row="2" Grid.Column="2" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc" CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ら" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ra" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="2" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#a6aaff" CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="り" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ri" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="2" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="る" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ru" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="2" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="れ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="re" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="2" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ろ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ro" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+
+        <Border Grid.Row="2" Grid.Column="3" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="や" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ya" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="3" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ゆ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Text="yu" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="3" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="よ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock  Text="yo" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Border Grid.Row="2" Grid.Column="4" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ま" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ma" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="4" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="み" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="mi" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="4" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="む" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="mu" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="4" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="め" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="me" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="4" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="も" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="mo" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <Border Grid.Row="2" Grid.Column="5" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="は" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ha" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="5" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ひ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="hi" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="5" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ふ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="fu" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="5" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="へ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="he" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="5" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ほ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ho" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+
+
+
+        <Border Grid.Row="2" Grid.Column="6" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="な" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="na" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="6" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="に" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ni" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="6" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ぬ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="nu" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="6" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ね" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ne" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="6" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="の" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="no" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <Border Grid.Row="2" Grid.Column="7" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="た" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ta" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="7" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="ち" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="chi" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="7" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc" CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="つ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="tsu" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="7" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="て" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="te" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="7" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="と" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="to" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <Border Grid.Row="2" Grid.Column="8" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="さ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="sa" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="8" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="し" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="shi" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="8" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="す" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="su" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="8" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="せ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="se" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="8" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="そ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="so" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <Border Grid.Row="2" Grid.Column="9" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="か" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ka" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="9" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="き" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ki" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="9" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="く" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ku" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="9" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="け" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ke" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="9" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="こ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="ko" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <Border Grid.Row="2" Grid.Column="10" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="あ" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="a" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="10" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="い" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="i" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="10" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="う" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="u" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="10" Width="46" Height="72" 
+                Margin="4,2,4,2" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="え" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="e" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="10" Width="46" Height="72" 
+                Margin="4,2,4,20" Background="#acb4fc"  CornerRadius="8"  Padding="5">
+            <Grid>
+                <StackPanel>
+                    <TextBlock  Text="お" FontSize="22" Foreground="White" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="o" Foreground="#e6e6e6" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+
+    </Grid>
+</Page>

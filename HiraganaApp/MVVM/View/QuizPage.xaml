@@ -1,0 +1,178 @@
+﻿<Page x:Class="HiraganaApp.MVVM.View.QuizPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HiraganaApp.MVVM.View"
+      mc:Ignorable="d" 
+      Background="#c5cbfa"
+      d:DesignHeight="520" d:DesignWidth="800"
+      Title="QuizPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="131.915"/>
+            <RowDefinition Height="28.085"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="270"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.ColumnSpan="3"
+                   FontSize="30" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center"
+                   Text="ひ　ら　が　な" 
+                   Foreground="White" 
+                   Margin="0 3 0 0"
+                   />
+        
+        <Border 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            Background="White"  
+            Width="105" 
+            Height="40" 
+            CornerRadius="10" 
+            Margin="150,30,0,210">
+            
+            <TextBlock  x:Name="scoreTxt"
+                Text="SCORE 0/46" 
+                Foreground="#acb4fc" 
+                FontSize="16" 
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom" Margin="0,0,0,9"/>
+            
+        </Border>
+        
+        <Button x:Name="ExitButton"
+                    Click="ExitButton_Click"
+                    Grid.Row="0" Grid.Column="2"
+                    Height = "50"
+                    Width="70"
+                    Content="Exit"
+                    FontSize="15"
+                    Foreground="White"
+                    Background="#acb4fc"
+                   
+                    BorderBrush="Transparent"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="165,0,20,10" 
+                    />
+
+        <Button x:Name="MenuButton"
+                    Click="MenuButton_Click"
+                    Grid.Row="0" Grid.Column="0"
+                    Height = "50"
+                    Width="80"
+                    Content="Menu"
+                    FontSize="15"
+                    Foreground="White"
+                    Background="#acb4fc"
+                    BorderBrush="Transparent"
+                    Style="{StaticResource MaterialDesignFlatButton}"  
+                    Margin="25,0,150,10" 
+                    />
+
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="230"
+            Height="250"
+            CornerRadius="30"
+            Background="White" 
+            Margin="20,10,20,0" 
+            VerticalAlignment="Top">
+            
+            
+            <TextBlock x:Name ="LetterTxtBlock" 
+                       FontSize="150" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       Foreground="#acb4fc"/>
+        </Border>
+
+        <Image
+               Source="/Images/png-image.png"
+               Margin="5,71,121,0"  
+               Grid.Row="2" 
+               Grid.Column="0" 
+               Grid.RowSpan="2"
+              />
+        <Image
+               Source="/Images/image reversed.png"
+               Margin="121,71,5,0" 
+               Grid.Row="2" 
+               Grid.Column="2" 
+               Grid.RowSpan="2"
+              />
+
+        <Button x:Name="answButton1"
+                    Click="ChekAnswer"
+                    Grid.Row="2" Grid.Column="0"
+                    Height = "70"
+                    Width="80"
+                    Content="u"
+                    FontSize="25"
+                    Foreground="White"
+                    Background="#acb4fc"
+                    BorderBrush="White"
+                    BorderThickness="3"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="165,20,10,42" RenderTransformOrigin="0.463,0.447" 
+                    />
+        <Button x:Name="answButton2"
+                    Click="ChekAnswer"
+                    Grid.Row="2" Grid.Column="1"
+                    Height = "70"
+                    Width="80"
+                    Content="a"
+                    FontSize="25"
+                    Foreground="White"
+                    Background="#acb4fc"
+                    Margin="30,21,160,41"
+                    BorderBrush="White"
+                    BorderThickness="3"
+                    Style="{StaticResource MaterialDesignFlatButton}"  
+                    />
+
+        <Button x:Name="answButton3"
+                    Click="ChekAnswer"
+                    Grid.Row="2" Grid.Column="1"
+                    Height = "70"
+                    Width="80"
+                    Content="a"
+                    FontSize="25"
+                    Foreground="White"
+                    Background="#acb4fc"
+                    Margin="160,20,30,42"
+                    BorderBrush="White"
+                    BorderThickness="3"
+                    Style="{StaticResource MaterialDesignFlatButton}"  
+                    />
+        <Button x:Name="answButton4"
+                    Click="ChekAnswer"
+                    Grid.Row="2" Grid.Column="2"
+                    Height = "70"
+                    Width="80"
+                    Content="i"
+                    FontSize="25"
+                    Foreground="White"
+                    Background="#acb4fc"
+                    BorderBrush="White"
+                    BorderThickness="3"
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    Margin="20,20,155,42" 
+                    />
+
+
+    </Grid>
+</Page>

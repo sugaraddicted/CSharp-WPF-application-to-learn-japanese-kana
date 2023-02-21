@@ -1,0 +1,20 @@
+﻿<Window x:Name="MainWindow1" x:Class="HiraganaApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiraganaApp"
+        xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+        mc:Ignorable="d"
+        Height="540" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Background="#c5cbfa" ResizeMode="NoResize"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        MouseDown="Move"
+        
+        >
+
+
+    <Frame x:Name ="MainFrame" NavigationUIVisibility="Hidden" MouseDown="Move"/>
+    
+</Window>
