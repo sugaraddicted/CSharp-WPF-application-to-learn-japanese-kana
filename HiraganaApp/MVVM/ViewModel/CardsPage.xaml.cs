@@ -15,11 +15,11 @@ namespace HiraganaApp.MVVM.View
     
     public partial class CardsPage : Page
     {
-        public List<Letter> Letters { get; set; } = DataAccess.GetLetterList();
+        public List<Letter> Letters = DataAccess.GetLetterList();
 
-        public List<Letter> _mixedLettersList { get; set; }
+        public List<Letter> _mixedLettersList;
 
-        public int _questionNumber { get; set; } = 0;
+        public int _questionNumber;
 
         public CardsPage()
         {

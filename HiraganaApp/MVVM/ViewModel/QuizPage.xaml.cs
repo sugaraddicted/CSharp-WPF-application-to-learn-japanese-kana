@@ -18,15 +18,15 @@ namespace HiraganaApp.MVVM.View
     public partial class QuizPage : Page
     {
 
-        public List<Letter> Letters { get; set; } = DataAccess.GetLetterList();
+        public List<Letter> Letters = DataAccess.GetLetterList();
 
-        public Letter _letter { get; set; }  
+        public Letter _letter;
 
-        public int _score { get; set; }   
+        public int _score;
 
-        public int _questionNumber { get; set; } 
+        public int _questionNumber;
 
-        public int _counter { get; set; }
+        public int _counter;
        
         public QuizPage()
         {
