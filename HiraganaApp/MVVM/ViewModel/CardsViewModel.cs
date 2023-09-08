@@ -2,13 +2,8 @@
 using HiraganaApp.Help;
 using HiraganaApp.MVVM.Model;
 using HiraganaApp.MVVM.View;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using System.Windows;
 using GalaSoft.MvvmLight.Command;
 
@@ -16,19 +11,16 @@ namespace HiraganaApp.MVVM.ViewModel
 {
     public class CardsViewModel
     {
-        public List<Letter> Letters = DataAccess.GetLetterList();
+        private List<Letter> _letters;
+        private List<Letter> _mixedLettersList;
+        private int _questionNumber;
+        private CardsPage _page;
 
-        public List<Letter> _mixedLettersList;
-
-        public int _questionNumber;
-
-        CardsPage _page;
-
-        public RelayCommand MenuButtonCommand { get; private set; }
-        public RelayCommand ExitButtonCommand { get; private set; }
-        public RelayCommand NextButtonCommand { get; private set; }
-        public RelayCommand ReverseButtonCommand { get; private set; }
-        public RelayCommand PreviousButtonCommand { get; private set; }
+        public RelayCommand MenuButtonCommand { get; }
+        public RelayCommand ExitButtonCommand { get; }
+        public RelayCommand NextButtonCommand { get; }
+        public RelayCommand ReverseButtonCommand { get; }
+        public RelayCommand PreviousButtonCommand { get; }
 
         public CardsViewModel(CardsPage page)
         {
@@ -39,6 +31,7 @@ namespace HiraganaApp.MVVM.ViewModel
             ReverseButtonCommand = new RelayCommand(ReverseCard);
             PreviousButtonCommand = new RelayCommand(GoToPrevious);
         }
+
         private void NavigateToMainPage()
         {
             if (Application.Current.MainWindow.FindName("MainFrame") is Frame frame)
@@ -55,20 +48,23 @@ namespace HiraganaApp.MVVM.ViewModel
         public void Start()
         {
             _questionNumber = 0;
-            _mixedLettersList = QuizHelper.MixLetters(Letters);
+            _letters = DataAccess.GetLetterList();
+            _mixedLettersList = QuizHelper.MixLetters(_letters);
             SetSymbolSide();
 
             _page.LeftBorder1.Background = _page.Background;
             _page.LeftBorder2.Background = _page.Background;
 
-            _page.NextTxt.Text = _mixedLettersList[_questionNumber + 1].Symbol;
+            if (_mixedLettersList.Count > 1)
+            {
+                _page.NextTxt.Text = _mixedLettersList[1].Symbol;
+            }
         }
 
         public void GoToNext()
         {
             _questionNumber++;
             SetSymbolSide();
-
             SetPreviousCard();
 
             if (_questionNumber >= _mixedLettersList.Count - 1)
@@ -76,7 +72,10 @@ namespace HiraganaApp.MVVM.ViewModel
                 _questionNumber = 0;
             }
 
-            _page.NextTxt.Text = _mixedLettersList[_questionNumber + 1].Symbol;
+            if (_mixedLettersList.Count > 1)
+            {
+                _page.NextTxt.Text = _mixedLettersList[_questionNumber + 1].Symbol;
+            }
         }
 
         public void ReverseCard()
@@ -91,21 +90,19 @@ namespace HiraganaApp.MVVM.ViewModel
             }
         }
 
-
         public void GoToPrevious()
         {
             if (_questionNumber > 0)
             {
                 _questionNumber--;
+                SetSymbolSide();
+            }
 
-                SetSymbolSide();
-                _page.NextTxt.Text = _mixedLettersList[_questionNumber + 1].Symbol;
-            }
-            else if (_questionNumber == 0)
+            if (_questionNumber >= 0 && _mixedLettersList.Count > 1)
             {
-                SetSymbolSide();
                 _page.NextTxt.Text = _mixedLettersList[_questionNumber + 1].Symbol;
             }
+
             SetPreviousCard();
         }
 
@@ -123,7 +120,6 @@ namespace HiraganaApp.MVVM.ViewModel
                 _page.LeftBorder1.Background = _page.Background;
                 _page.LeftBorder2.Background = _page.Background;
                 _page.PrevTxt.Foreground = _page.Background;
-
             }
         }
 
@@ -132,9 +128,7 @@ namespace HiraganaApp.MVVM.ViewModel
             _page.CardBord1.Background = _page.RightBorder1.Background;
             _page.CardBord2.Background = _page.RightBorder2.Background;
             _page.SymbolTxt.Foreground = _page.CardBord1.Background;
-
             _page.SymbolTxt.FontSize = 130;
-
             _page.SymbolTxt.Text = _mixedLettersList[_questionNumber].Symbol;
         }
 
@@ -143,9 +137,7 @@ namespace HiraganaApp.MVVM.ViewModel
             _page.CardBord1.Background = _page.RightBorder2.Background;
             _page.CardBord2.Background = _page.RightBorder1.Background;
             _page.SymbolTxt.Foreground = _page.CardBord1.Background;
-
             _page.SymbolTxt.FontSize = 100;
-
             _page.SymbolTxt.Text = _mixedLettersList[_questionNumber].Transcription;
         }
     }
