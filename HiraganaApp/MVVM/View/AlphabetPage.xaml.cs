@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using HiraganaApp.MVVM.ViewModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
@@ -13,16 +14,8 @@ namespace HiraganaApp.MVVM.View
         public AlphabetPage()
         {
             InitializeComponent();
-        }
-
-        private void MenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new MainPage());
-        }
-
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
+             var viewModel = new AlphabetViewModel();
+            DataContext = viewModel;
         }
     }
 }
