@@ -53,7 +53,7 @@
         </Border>
         
         <Button x:Name="ExitButton"
-                    Click="ExitButton_Click"
+                    Command="{Binding ExitButtonCommand}"
                     Grid.Row="0" Grid.Column="2"
                     Height = "50"
                     Width="70"
@@ -68,7 +68,7 @@
                     />
 
         <Button x:Name="MenuButton"
-                    Click="MenuButton_Click"
+                    Command="{Binding MenuButtonCommand}"
                     Grid.Row="0" Grid.Column="0"
                     Height = "50"
                     Width="80"
@@ -172,7 +172,5 @@
                     Style="{StaticResource MaterialDesignFlatButton}" 
                     Margin="20,20,155,42" 
                     />
-
-
     </Grid>
 </Page>
