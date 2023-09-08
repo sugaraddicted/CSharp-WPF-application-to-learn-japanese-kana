@@ -43,7 +43,7 @@
 
 
         <Button x:Name ="ExitButton"
-                    Click ="ExitButton_Click"
+                    Command="{Binding ExitButtonCommand}"
                     Grid.Row="0" Grid.Column="2"
                     Height = "50"
                     Width="70"
@@ -57,7 +57,7 @@
                     />
 
         <Button x:Name="AlphabetButton"
-                    Click="AlphabetButton_Click"
+                    Command="{Binding AlphabetButtonCommand}"
                     Grid.Row="2" Grid.Column="0"
                     Height = "110" 
                     Content="Alphabet"
@@ -70,7 +70,7 @@
                     />
 
         <Button x:Name="CardsButton"
-                    Click="CardsButton_Click"
+                    Command="{Binding CardsButtonCommand}"
                     Grid.Row="2" Grid.Column="1"
                     Height = "110"
                     Content="Cards"
@@ -84,7 +84,7 @@
                     />
 
         <Button x:Name="QuizButton"
-                    Click="QuizButton_Click"
+                    Command="{Binding QuizButtonCommand}"
                     Grid.Row="2" Grid.Column="2"
                     Height = "110" 
                     Content="Quiz"
@@ -95,12 +95,5 @@
                     BorderBrush="Transparent"
                     Style="{StaticResource MaterialDesignFlatButton}"
                    />
-
-
-
-
-
-
-
     </Grid>
 </Page>
