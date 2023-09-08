@@ -34,7 +34,7 @@
 
 
         <Button x:Name="ExitButton"
-                    Click="ExitButton_Click"
+                    Command="{Binding ExitButtonCommand}"
                     Grid.Row="0" Grid.Column="2"
                     Height = "50"
                     Width="70"
@@ -48,7 +48,7 @@
                     />
 
         <Button x:Name="MenuButton"
-                    Click="MenuButton_Click"
+                    Command="{Binding MenuButtonCommand}"
                     Grid.Row="0" Grid.Column="0"
                     Height = "50"
                     Width="80"
@@ -159,7 +159,7 @@
         </Grid>
         
         <Button x:Name="NextButton"
-                Click="NextButton_Click"
+                Command="{Binding NextButtonCommand}"
                 Grid.Row="2" Grid.Column="2"
                 Style="{StaticResource MaterialDesignIconButton}"
                 Background="#acb4fc"
@@ -177,7 +177,7 @@
         
         
         <Button x:Name="ReverseButton"
-                Click="ReverseButton_Click"
+                Command="{Binding ReverseButtonCommand}"
                 Grid.Row="2" Grid.Column="1"
                 Style="{StaticResource MaterialDesignIconButton}"
                 Background="#acb4fc"
@@ -196,7 +196,7 @@
         
         
         <Button x:Name="PrevButton"
-                 Click="PrevButton_Click"
+                Command="{Binding PreviousButtonCommand}"
                 Grid.Row="2" Grid.Column="0"
                 Style="{StaticResource MaterialDesignIconButton}"
                 Background="#acb4fc"
